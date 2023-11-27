@@ -24,6 +24,12 @@
 		);
 	}
 
+	function handleChange(e: { detail: string }) {
+		if (!webcontainer) return;
+
+		webcontainer.fs.writeFile('main.js', e.detail);
+	}
+
 	onMount(startTestProcess);
 </script>
 
@@ -31,7 +37,7 @@
 	<div class="w-1/2"><Tutorial content={data.tutorialMd} /></div>
 	<div class="w-1/2 flex flex-col gap-8">
 		<div class="h-1/2">
-			<Editor />
+			<Editor doc={data.fileSystem['main.js'].file.contents} on:change={handleChange} />
 		</div>
 		<div class="h-1/2">
 			<Output />

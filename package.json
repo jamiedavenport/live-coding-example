@@ -33,7 +33,10 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@codemirror/lang-javascript": "^6.2.1",
+		"@codemirror/state": "^6.3.2",
 		"@webcontainer/api": "^1.1.8",
+		"codemirror": "^6.0.1",
 		"marked": "^10.0.0"
 	}
 }
