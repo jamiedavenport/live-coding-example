@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@webcontainer/api": "^1.1.8",
 		"marked": "^10.0.0"
 	}
 }
