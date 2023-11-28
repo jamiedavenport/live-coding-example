@@ -6,6 +6,7 @@
 	import type { WebContainer } from '@webcontainer/api';
 	import { loadWebcontainer } from '$lib/client/webcontainer';
 	import { onMount } from 'svelte';
+	import { terminal } from '$lib/client/terminal';
 
 	export let data: PageData;
 
@@ -13,12 +14,13 @@
 
 	async function startTestProcess() {
 		webcontainer = await loadWebcontainer(data.fileSystem);
+		const term = await terminal;
 
 		const testProcess = await webcontainer.spawn('npm', ['test']);
 		testProcess.output.pipeTo(
 			new WritableStream({
 				write(data) {
-					console.log(data);
+					term.write(data);
 				}
 			})
 		);
