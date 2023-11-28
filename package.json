@@ -14,7 +14,6 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.27.4",
-		"@tailwindcss/typography": "^0.5.10",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
 		"autoprefixer": "^10.4.16",
@@ -33,11 +32,5 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@codemirror/lang-javascript": "^6.2.1",
-		"@codemirror/state": "^6.3.2",
-		"@webcontainer/api": "^1.1.8",
-		"codemirror": "^6.0.1",
-		"marked": "^10.0.0",
-		"xterm": "^5.3.0"
 	}
 }
